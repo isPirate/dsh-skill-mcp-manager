@@ -4,3 +4,5 @@ node_modules/
 .DS_Store
 # 项目目录里的其他独立项目（不纳入本插件仓库）
 /snake-game/
+/restart-dsh.cmd
+.npm-cache/

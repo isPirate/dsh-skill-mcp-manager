@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax check
+        run: |
+          node --check src/index.js
+          node --check src/client.js
+          node --check scripts/build.mjs
+      - name: Build
+        run: npm run build
+      - name: Verify lib parity
+        run: |
+          cmp src/index.js lib/index.js
+          cmp src/client.js lib/client.js

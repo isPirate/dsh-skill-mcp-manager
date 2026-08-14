@@ -2,9 +2,18 @@
   "name": "dsh-skill-mcp-manager",
   "description": "技能（Skill）与 MCP 服务器管理插件 for DeepSeek Harness (DSH)：Web 设置页「技能与 MCP」（技能启用/禁用、MCP 服务器增删改查/连接状态检测/文本格式化导入）+ 模型工具 skillmcp_manage。宿主端提供 /api/dsh-skill-mcp 路由族与工具注册，浏览器端提供设置区。经 cordis.patch.yml 挂载，热插拔，无需修改 dsh 源码。",
   "version": "1.0.0",
+  "author": "isPirate",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isPirate/dsh-skill-mcp-manager.git"
+  },
+  "homepage": "https://github.com/isPirate/dsh-skill-mcp-manager",
+  "bugs": {
+    "url": "https://github.com/isPirate/dsh-skill-mcp-manager/issues"
+  },
   "type": "module",
   "main": "lib/index.js",
-  "types": "lib/types/index.d.ts",
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
@@ -41,6 +50,7 @@
     "lib",
     "src",
     "cordis.patch.yml",
+    "LICENSE",
     "README.md"
   ],
   "keywords": [

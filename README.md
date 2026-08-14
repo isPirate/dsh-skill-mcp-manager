@@ -67,6 +67,13 @@ dsh plugin --profile web add link:<本仓库绝对路径>
 宿主端挂载后立即提供 `/api/dsh-skill-mcp` 路由与 `skillmcp_manage` 工具；浏览器端刷新页面后
 出现「技能与 MCP」设置区（客户端 bundle 由 web 服务按 `dsh.client` 声明自动加载）。
 
+**更新 / 卸载**：
+
+```bash
+dsh plugin --profile web update dsh-skill-mcp-manager   # 更新到新版本
+dsh plugin --profile web remove dsh-skill-mcp-manager   # 卸载（配置数据保留在磁盘）
+```
+
 ## 环境要求
 
 - DSH `>= 0.1.0-rc.6`（`@deepseek-ai/dsh-web-app` web profile）
