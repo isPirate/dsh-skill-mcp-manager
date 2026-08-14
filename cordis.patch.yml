@@ -1,0 +1,17 @@
+# dsh-skill-mcp-manager bundle patch: inserts the dual-face plugin row into
+# the web profile roster. Applied as a profile bundle layer (the
+# `dsh.bundle.patch` manifest field) or by adding the same row to the
+# profile's own patch file (~/.dsh/profiles/web/cordis.patch.yml):
+#
+#   - insert:
+#       - id: skill-mcp-manager
+#         name: 'dsh-skill-mcp-manager'
+#
+# The row is a bare plugin by package name: the node half (exports ".") runs
+# in the host process (skills/MCP management engine, /api/dsh-skill-mcp
+# routes, the skillmcp_manage agent tool), and the `dsh.client` declaration
+# in package.json makes the browser half (exports "./client") load in the
+# web GUI as the「技能与 MCP」settings section.
+- insert:
+    - id: skill-mcp-manager
+      name: 'dsh-skill-mcp-manager'
